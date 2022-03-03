@@ -1,0 +1,22 @@
+type Mutation {
+  root: String
+}
+
+type response {
+  min: Int
+  avg: String
+  max: Int
+}
+type statusResponse {
+  messages: Int
+  queries: Int
+  responseTime: response
+  characters: response
+  words: response
+  numbers: response
+  emojis: response
+}
+
+type Query {
+  status: statusResponse!
+}
