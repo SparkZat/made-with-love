@@ -1,11 +1,11 @@
-import { ApolloServer } from 'apollo-server';
-import { readFileSync } from 'fs';
+import { ApolloServer } from "apollo-server";
+import { readFileSync } from "fs";
 
-import { resolvers } from './src/graphql/messages/msgs.resolver';
+import { resolvers } from "./src/graphql/messages/msgs.resolver";
 
-const typeDefs = readFileSync('./src/graphql/messages/schema.graphql').toString('utf-8');
-
-console.log('About to start');
+const typeDefs = readFileSync("./src/graphql/messages/schema.graphql").toString(
+  "utf-8"
+);
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
@@ -13,5 +13,3 @@ const server = new ApolloServer({ typeDefs, resolvers });
 server.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
 });
-
-console.log('YAY');
