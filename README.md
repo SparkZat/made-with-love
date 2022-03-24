@@ -2,7 +2,7 @@
 
 # Introduction
 
-This is an assignment Made with <3.
+A parser to learn graphql-generated
 
 # Build and Test
 
